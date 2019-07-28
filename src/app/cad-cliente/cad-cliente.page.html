@@ -1,0 +1,64 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button href="./home"> <ion-icon
+          name="arrow-back"></ion-icon></ion-button>
+          </ion-buttons>
+    <ion-title>Cadastro de Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label >Digite aqui seu nome:</ion-label>
+    <ion-input [(ngModel)]="nomeCliente"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Telefone:</ion-label>
+    <ion-input [(ngModel)]="telefoneCliente"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Celular:</ion-label>
+    <ion-input [(ngModel)]="celularCliente"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Numero da casa:</ion-label>
+    <ion-input [(ngModel)]="numCasaCliente"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Digite Seu cep:</ion-label>
+    <ion-input [(ngModel)]="cepCliente" (focusout)="listaCep()"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Lorgadouro:</ion-label>              
+    <ion-input type="text" *ngIf="endereco.logradouro">{{endereco.logradouro}}</ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Complemento:</ion-label>
+    <ion-input type="text" *ngIf="endereco.complemento">{{endereco.complemento}}</ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Bairro:</ion-label>
+    <ion-input type="text" *ngIf="endereco.bairro">{{endereco.bairro}}</ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Cidade:</ion-label>
+    <ion-input type="text" *ngIf="endereco.localidade">{{endereco.localidade}}</ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >UF:</ion-label>
+    <ion-input type="text" *ngIf="endereco.uf">{{endereco.uf}}</ion-input>
+  </ion-item>
+  
+ 
+  <ion-button (click)="setCliente()" shape="round" >Cadastrar como um Cliente </ion-button>
+  <ion-button color="light" shape="round" href="./list-cliente">Clique Aqui para Listar Clientes</ion-button>
+  <ion-button color="light" shape="round" href="./home">Clique Aqui para Página Inicial</ion-button>
+</ion-content>

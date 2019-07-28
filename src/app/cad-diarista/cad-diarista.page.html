@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar><ion-buttons slot="start">
+    <ion-button href="./home"> <ion-icon
+    name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Fornecedores</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item>
+  <ion-label position="floating">Digite aqui seu nome:</ion-label>
+  <ion-input [(ngModel)]="nomeFornecedor"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Telefone:</ion-label>
+  <ion-input [(ngModel)]="telefoneFornecedor"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Celular:</ion-label>
+  <ion-input [(ngModel)]="celularFornecedor"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Experiência:</ion-label>
+  <ion-input [(ngModel)]="experienciaFornecedor"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label position="floating">Digite Seu cep:</ion-label>
+    <ion-input [(ngModel)]="cepFornecedor"></ion-input>
+  </ion-item>
+
+<ion-item>
+  <ion-label >Lorgadouro:</ion-label>              
+  <ion-input type="text" *ngIf="endereco.logradouro">{{endereco.logradouro}}</ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label >Complemento:</ion-label>
+  <ion-input type="text" *ngIf="endereco.complemento">{{endereco.complemento}}</ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label >Bairro:</ion-label>
+  <ion-input type="text" *ngIf="endereco.bairro">{{endereco.bairro}}</ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label >Cidade:</ion-label>
+  <ion-input type="text" *ngIf="endereco.localidade">{{endereco.localidade}}</ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label >UF:</ion-label>
+  <ion-input type="text" *ngIf="endereco.uf">{{endereco.uf}}</ion-input>
+</ion-item>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    <ion-thumbnail slot="start">
+      <ion-img [src]="arquivo"></ion-img>
+    </ion-thumbnail>
+    <ion-label>{{item.text}}</ion-label>
+  </ion-item>
+</ion-list>
+<ion-button (click)="takePhoto()" >Tirar Foto</ion-button><br>
+<ion-button (click)="verGaleria()" >Ver Galeria</ion-button><br>
+<ion-button (click)="upload()" >Upload</ion-button><br>
+
+
+<ion-button (click)="setDiarista()" shape="round" >Cadastrar como um Fornecedor </ion-button>
+
+
+<ion-button color="light" shape="round" href="./list-diarista">Clique Aqui para Listar Fonecedores</ion-button>
+<ion-button color="light" shape="round" href="./home">Clique Aqui para Página Inicial</ion-button>
+
+
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Página Inicial
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Diarista</ion-card-subtitle>
+        <ion-card-title>Bem-vindo!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>A ideia desse app é gerar um programa que cadastre pessoas que trabalhem de diarista para que possam divulgar seu trabalho. <br> Criado por MARCELO BARROS FLORENTINO DA SILVA</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Recursos</ion-label>
+      </ion-list-header>
+      <ion-item href="cad-diarista">
+        <ion-icon slot="start" color="medium" name="build"></ion-icon>
+        <ion-label>Cadastro De Diariastas</ion-label>
+      </ion-item>
+      <ion-item href="list-diarista">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>Lista de Diariastas</ion-label>
+      </ion-item>
+      
+      <ion-item href="cad-cliente">
+        <ion-icon slot="start" color="medium" name="build"></ion-icon>
+        <ion-label>Cadastro de Clientes</ion-label>
+      </ion-item>
+      <ion-item href="list-cliente">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>Lista de Clientes</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/layout/structure">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Historico de serviços</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/theming/basics">
+        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
+        <ion-label>Nivel de Confiabidade Cliente/Diarista e Diarista/Cliente</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>

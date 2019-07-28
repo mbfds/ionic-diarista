@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button href="./home"> <ion-icon
+          name="arrow-back"></ion-icon></ion-button>
+          </ion-buttons>
+    <ion-title>Listar Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let cliente of lista_clientes">
+  <ion-card-header>
+    <ion-card-subtitle>Algo para se pensar</ion-card-subtitle>
+    <ion-card-title>Nome:{{cliente.nomeCliente }}</ion-card-title>
+    
+  </ion-card-header>
+
+  <ion-card-content>
+    Celular:{{cliente.celularCliente }}<br>
+    Telefone:{{cliente.telefoneCliente }}<br>
+    CEP:{{cliente.cepCliente}}<br>
+    Número da casa:{{cliente.numCasaCliente}}<br>
+  </ion-card-content>
+</ion-card>
+
+
+
+<ion-button color="light" shape="round" href="./cad-cliente">Clique Aqui para Cadastrar Cliente</ion-button>
+<ion-button color="light" shape="round" href="./home">Clique Aqui para Página Inicial</ion-button>
+
+
+</ion-content>
