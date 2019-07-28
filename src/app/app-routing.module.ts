@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'cad-diarista', loadChildren: './cad-diarista/cad-diarista.module#CadDiaristaPageModule' },
   { path: 'list-cliente', loadChildren: './list-cliente/list-cliente.module#ListClientePageModule' },
   { path: 'list-diarista', loadChildren: './list-diarista/list-diarista.module#ListDiaristaPageModule' },
-  { path: 'cad-cliente', loadChildren: './cad-cliente/cad-cliente.module#CadClientePageModule' }];
+  { path: 'cad-cliente', loadChildren: './cad-cliente/cad-cliente.module#CadClientePageModule' },]  { path: 'teste-midia', loadChildren: './teste-midia/teste-midia.module#TesteMidiaPageModule' }
+;
 
 @NgModule({
   imports: [
